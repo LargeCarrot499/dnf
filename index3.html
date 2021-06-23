@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<style type="text/css">
+		/*格式化标签*/
+
+		body,
+		p,
+		ul,
+		li,
+		ol,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		img {
+			padding: 0;
+			margin: 0;
+		}
+
+		ul,
+		li,
+		ol {
+			list-style: none;
+		}
+
+		img {
+			border: 0;
+			vertical-align: middle;
+		}
+
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		body {
+			font-size: 12px;
+			font-family: "微软雅黑";
+		}
+
+		/*.header {
+				height: 39px;
+			}
+			
+			.header .senter {
+				float: left;
+				margin-left: 510px;
+			}
+			
+			.header .right {
+				width: 280px;
+				height: 20px;
+				font-size: 12px;
+				float: right;
+				margin-top: 10px;
+				margin-right: 250px;
+			}
+			
+			.header .right ul li {
+				padding-left: 20px;
+				padding-right: 20px;
+				float: left;
+				border-right: 1px solid #000000;
+				height: 20px;
+				line-height: 20px;
+			}
+			
+			.header .right ul li a:hover {
+				color: #0096D0;
+			}
+			
+			.header .right ul li:nth-child(3) {
+				border: 0;
+			}
+			*/
+
+		.top {
+			height: 42px;
+			/* background: #000; */
+		}
+
+		.top a {
+			font-size: 12px;
+			/* color: black; */
+		}
+
+		/* DNF安全中心 */
+
+		.top .safe {
+			display: block;
+			float: left;
+			width: 230px;
+			height: 39px;
+			margin-left: 500px;
+			background: url(img/safe.png) no-repeat;
+		}
+
+		/* 返回官网首页 */
+
+		.top .return {
+			display: block;
+			float: right;
+			width: 80px;
+			height: 100%;
+			line-height: 42px;
+			text-align: center;
+			margin-left: 25px;
+			margin-right: 300px;
+			/* background: #0f0; */
+		}
+
+		/* 游戏下载，充值点券，开通黑钻 */
+
+		.top .right {
+			float: right;
+			width: 250px;
+			height: 42px;
+			/* background: #0ff; */
+		}
+
+		/* .top .right ul {
+            display: block;
+        } */
+
+		.top .right a {
+			display: block;
+			float: left;
+			width: 67px;
+			text-align: center;
+			/* height: 16px; */
+			line-height: 42px;
+			margin: 0 5px;
+		}
+
+		.top .right span {
+			font-size: 10px;
+			display: block;
+			float: left;
+			line-height: 42px;
+		}
+
+		.top .safe:hover,
+		.top .return:hover,
+		.top .right a:hover {
+			color: #0096d0;
+		}
+
+		.logo {
+			height: 111px;
+			width: 100%;
+			background: #2C2722;
+			background: url(img/sprite-down.png) no-repeat center 0;
+			overflow: hidden;
+			float: left;
+		}
+
+		.logo .box1 {
+			width: 300px;
+			height: 111px;
+			background-color: #2C2722;
+			float: left;
+		}
+
+		.logo .box2 {
+			width: 275px;
+			height: 111px;
+			background-color: #2C2722;
+			float: right;
+		}
+
+		.logo .box3 {
+			width: 215px;
+			height: 115px;
+			/*background: #0000FF;*/
+			/*background: url(img/sprite-down.png) -356px -112px;*/
+			float: left;
+			margin-left: 320px;
+			/*display: none;*/
+		}
+
+		.logo .box3:hover .boxh {
+			background: url(img/sprite-down.png) -356px -112px;
+		}
+
+		.logo .box3 .boxh,
+		.logo .box4 .boxh,
+		.logo .box5 .boxh {
+			/*float: left;*/
+			width: 100%;
+			height: 100%;
+			/*background: url(img/sprite-down.png) -356px -112px;*/
+			/*display: none;*/
+		}
+
+		.logo .box3:hover {
+			cursor: pointer;
+		}
+
+		.logo .box3:hover+.boxh {
+			background: url(img/sprite-down.png) -356px -112px;
+			/*background-color: #0f0;*/
+			/*display: block;*/
+		}
+
+		/*.logo .box3:hover+div {
+				display: block;
+			}*/
+
+		.logo .box4 {
+			width: 203px;
+			height: 115px;
+			/*background: #0096D0;*/
+			/*background: url(img/sprite-down.png) -571px -112px;*/
+			float: left;
+		}
+
+		.logo .box4:hover .boxh {
+			background: url(img/sprite-down.png) -571px -112px;
+			cursor: pointer;
+		}
+
+
+
+		.logo .box5 {
+			width: 206px;
+			height: 115px;
+			/*background: yellow;*/
+			/*background: url(img/sprite-down.png) -763px -112px;*/
+			float: left;
+		}
+
+		.logo .box5:hover .boxh {
+			background: url(img/sprite-down.png) -763px -112px;
+			cursor: pointer;
+		}
+
+		.main1 {
+			min-height: 900px;
+			min-width: 1479.2px;
+			background: url(img/bg-down-path.jpg) no-repeat center 110px;
+			/*background: #000000;*/
+		}
+
+		.inner {
+			width: 500px;
+			height: 789px;
+			/*background-color: #8C8C8C;*/
+			margin-left: 700px;
+			overflow: hidden;
+			/*margin-top: 1;*/
+		}
+
+		.down1 {
+			width: 100%;
+			height: 150px;
+			/*background: #0096D0;*/
+			margin-top: 85px;
+			/*background: url(img/sprite-down.png) no-repeat bottom;*/
+			/*background: #0f0;*/
+		}
+
+		.xxs {
+			width: 265px;
+			height: 70px;
+			/*display: block;*/
+			background: url(img/sprite-down.png) no-repeat 0 -112px;
+			margin: 0 auto;
+			/*background-position: 0 -112px;*/
+		}
+
+		.xxs li {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+
+		.xxs li a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			text-indent: -999px;
+		}
+
+		.zxs {
+			width: 265px;
+			height: 70px;
+			background: url(img/sprite-down.png) no-repeat -396px -224px;
+			margin: 11px 0 16px 160px;
+		}
+
+		.zxs a {
+			display: block;
+			width: 230px;
+			height: 100%;
+		}
+
+		.down2 {
+			width: 100%;
+			height: 150px;
+			/*background: #0096D0;*/
+			/*margin-top: 85px;*/
+			/*background: #f00;*/
+		}
+
+		.down2 ul li {
+			float: left;
+			width: 280px;
+			margin-top: 10px;
+		}
+
+		.line {
+			width: 105px;
+			height: 3px;
+			background-color: #d24224;
+		}
+
+		.down-time {
+			height: 131px;
+			float: left;
+			width: 100%;
+		}
+
+		.down-time span {
+			display: inline-block;
+		}
+
+		.down-type {
+			width: 70px;
+		}
+
+		.modle-tit {
+			height: 28px;
+			line-height: 28px;
+			font-size: 18px;
+			color: #1b1b1b;
+			font-weight: bold;
+		}
+
+		.line {
+			width: 105px;
+			height: 3px;
+			background-color: #d24224;
+		}
+
+		.down-minute {
+			width: 52px;
+		}
+
+		.total {
+			width: 150px;
+			height: 17px;
+		}
+
+		.bg-c {
+			height: 17px;
+			position: relative;
+			top: 5px;
+			*top: -2px;
+		}
+
+		.bg-c1 {
+			background-color: #96d593;
+		}
+
+		.bg-c2 {
+			background-color: #6fc2e4;
+		}
+
+		.bg-c3 {
+			background-color: #ebca7c;
+		}
+
+		.bg-c4 {
+			background-color: #ea9e75;
+		}
+
+		.bg-c5 {
+			background-color: #e56765;
+		}
+
+		.chapter {
+			padding: 50px 0 50px 426px;
+			position: relative
+		}
+
+		.chapter-list {
+			width: 584px;
+			height: 140px;
+			/*font-size: 18px;*/
+		}
+
+		.chapter-list ul#chapter-list {
+			width: 200px;
+			height: 200px;
+			font-size: 18px;
+			float: left;
+		}
+
+		.chapter-list ul li {
+			margin-top: 12px;
+		}
+
+		.main3 ul li {
+			width: 1025px;
+		}
+
+		/* 尾部 */
+
+		.chapter-line {
+			width: 100px;
+			height: 146.2px;
+		}
+
+		.footer {
+			height: 180px;
+			background: #282725;
+		}
+
+		.footer .footbox {
+			width: 1010px;
+			height: 149px;
+			padding: 15px 20px;
+			margin: 0 auto;
+			background: #282725;
+		}
+
+		.footer .footbox .left {
+			float: left;
+			width: 297px;
+			height: 53px;
+			/* background: #00f; */
+			border-right: 1px solid #8c8c8c;
+		}
+
+		.footer .footbox .left a {
+			display: block;
+			float: left;
+			width: 180px;
+			height: 35px;
+			margin: 10px 0 0 10px;
+			background: url(img/foot-dark.png) no-repeat;
+		}
+
+		.footer .footbox .left .left2 {
+			float: left;
+			width: 97px;
+			height: 43px;
+			margin: 10px 0 0 10px;
+			background: url(img/sprite-bg.png) no-repeat -337px -436px;
+		}
+
+		.footer .footbox ul {
+			display: block;
+			float: right;
+			font-size: 12px;
+			/* margin-left: 15px; */
+			color: #8c8c8c;
+			line-height: 20px;
+		}
+
+		/* .footer .footbox ul li {
+            font-size: 12px;
+            color: #8c8c8c;
+        } */
+
+		.footer .footbox ul li a {
+			font-size: 12px;
+			color: #8c8c8c;
+		}
+
+		.footer .footbox ul li span {
+			margin: 0 2px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<!-- 顶部-------------------------------------------------- -->
+		<div class="top">
+			<!-- DNF安全中心 -->
+			<a class="safe" href="#"></a>
+			<!-- 返回官网首页 -->
+			<a class="return" href="index.html">返回官网首页</a>
+			<!-- 游戏下载，充值点券，开通黑钻 -->
+			<div class="right">
+				<a href="#">游戏下载</a>
+				<span>|</span>
+				<a href="#">充值点券</a>
+				<span>|</span>
+				<a href="#">开通黑钻</a>
+				<span>|</span>
+			</div>
+		</div>
+	</div>
+	<div class="logo">
+		<div class="box1">
+
+		</div>
+		<div class="box2">
+
+		</div>
+		<div class="box3">
+			<div class="boxh">
+
+			</div>
+		</div>
+		<div class="box4">
+			<div class="boxh">
+
+			</div>
+		</div>
+		<div class="box5">
+			<div class="boxh">
+
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<div class="main1">
+
+		<div class="inner">
+			<div class="down1">
+				<div class="xxs">
+					<li>
+						<a href="#">全新高速下载器</a>
+					</li>
+				</div>
+				<div class="zxs">
+					<a href="#"></a>
+				</div>
+			</div>
+			<div class="down2">
+				<ul>
+					<h2>文件信息</h2>
+					<div class="line"></div>
+					<li>客户端版本：<span>33.3.24.5</span></li>
+					<li>支持系统：WIN7/WIN8/WIN10</li>
+					<li>更新日期：2020-06-18</li>
+					<li>文件大小： <span id="path-volume">17800</span>M</li>
+				</ul>
+
+			</div>
+			<div class="down-time">
+				<div class="modle-tit"><s class="sprite-icon icon-tit"></s>下载耗时</div>
+				<div class="line"></div>
+				<ul>
+					<li><span class="down-type">100M光纤：</span> <span class="down-minute down-minute1">24分钟</span>
+						<span class="total"><span class="bg-c bg-c1" style="width: 16px;"></span></span>
+					</li>
+					<li><span class="down-type">50M光纤：</span> <span class="down-minute down-minute2">49分钟</span>
+						<span class="total"><span class="bg-c bg-c2" style="width: 32.6667px;"></span></span>
+					</li>
+					<li><span class="down-type">12M宽带：</span> <span class="down-minute down-minute3">197分钟</span>
+						<span class="total"><span class="bg-c bg-c3" style="width: 131.333px;"></span></span>
+					</li>
+					<li><span class="down-type">8M宽带：</span> <span class="down-minute down-minute4">296分钟</span>
+						<span class="total"><span class="bg-c bg-c4" style="width: 197.333px;"></span></span>
+					</li>
+					<li><span class="down-type">4M宽带：</span> <span class="down-minute down-minute5">593分钟</span>
+						<span class="total"><span class="bg-c bg-c5" style="width: 395.333px;"></span></span>
+					</li>
+				</ul>
+			</div>
+			<div class="chapter-list">
+				<div class="chapter-line"></div>
+				<ul id="chapter-list">
+					<li>
+						<a href="//dnf.qq.com/cp/a20200214version/" target="_blank">
+							<h4>无相冥渊来袭<s class="sprite-icon icon-chapter-down"></s></h4>
+							<div class="sprite-icon icon-chapter"></div>
+							<div class="chapter-name">拿神器装备和深渊票</div>
+							<div class="chapter-time">2月20日</div>
+						</a>
+					</li>
+					<li>
+						<a href="//dnf.qq.com/cp/a20200319index/" target="_blank">
+							<h4>100级·觉醒<s class="sprite-icon icon-chapter-down"></s></h4>
+							<div class="sprite-icon icon-chapter"></div>
+							<div class="chapter-name">新深渊来袭</div>
+							<div class="chapter-time">3月19日</div>
+						</a>
+					</li>
+					<li>
+						<a href="//dnf.qq.com/cp/a20200423version/" target="_blank">
+							<h4>100级·新深渊来袭<s class="sprite-icon icon-chapter-down"></s></h4>
+							<div class="sprite-icon icon-chapter"></div>
+							<div class="chapter-name">便利性改版与装备成长</div>
+							<div class="chapter-time">4月23日</div>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+
+		<div class="footbox">
+			<!-- 装图片的盒子 -->
+			<div class="left">
+				<!-- <div class="left1"></div> -->
+				<a href="#"></a>
+				<div class="left2"></div>
+			</div>
+			<!-- 右边文字 -->
+			<ul>
+				<li>
+					<a href="#">腾讯互动娱乐</a>
+					<span>|</span>
+					<a href="#">服务条款</a>
+					<span>|</span>
+					<a href="#">隐私保护指引</a>
+					<span>|</span>
+					<a href="#">儿童隐私保护指引</a>
+					<span>|</span>
+					<a href="#">腾讯游戏招聘</a>
+					<span>|</span>
+					<a href="#">腾讯游戏客服</a>
+					<span>|</span>
+					<a href="#">游戏列表</a>
+					<span>|</span>
+					<a href="#">广告服务及商务合作</a>
+				</li>
+				<li>腾讯公司版权所有</li>
+				<li>COPYRIGHT © 1998 - 2020 TENCENT. ALL RIGHTS RESERVED.</li>
+				<li>COPYRIGHT © NEOPLE.INC., ALL RIGHTS RESERVED.</li>
+				<li>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</li>
+				<li>本网络游戏适合13+岁的用户使用；为了您的健康，请合理控制游戏时间。</li>
+				<li>
+					<img src="img/police.png" alt="">
+					<a href="#">工商网监电子标识</a>
+					<span>|</span>
+					<a href="#">粤网文[2017]6318-1456号</a>
+					<span>|</span>
+					<a href="#">（总）网出证（粤）字第057号</a>
+				</li>
+				<li>
+					文网进字[2014]034号
+					<span>|</span> ISBN 978-7-89988-060-9
+					<span>|</span> 新广出审[2014]952号
+					<span>|</span> 全国文化市场统一举报电话：12318
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>

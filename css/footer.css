@@ -1,0 +1,60 @@
+ .footer {
+ 	margin-top: 30px;
+ 	height: 180px;
+ 	background: #282725;
+ }
+ 
+ .footer .footbox {
+ 	width: 1010px;
+ 	height: 149px;
+ 	padding: 15px 20px;
+ 	margin: 0 auto;
+ 	background: #282725;
+ }
+ 
+ .footer .footbox .left {
+ 	float: left;
+ 	width: 297px;
+ 	height: 53px;
+ 	/* background: #00f; */
+ 	border-right: 1px solid #8c8c8c;
+ }
+ 
+ .footer .footbox .left a {
+ 	display: block;
+ 	float: left;
+ 	width: 180px;
+ 	height: 35px;
+ 	margin: 10px 0 0 10px;
+ 	background: url(../img/Tencent.png) no-repeat;
+ }
+ 
+ .footer .footbox .left .left2 {
+ 	float: left;
+ 	width: 97px;
+ 	height: 43px;
+ 	margin: 10px 0 0 10px;
+ 	background: url(../img/down.png) no-repeat -337px -436px;
+ }
+ 
+ .footer .footbox ul {
+ 	display: block;
+ 	float: right;
+ 	font-size: 12px;
+ 	/* margin-left: 15px; */
+ 	color: #8c8c8c;
+ 	line-height: 20px;
+ }
+ /* .footer .footbox ul li {
+            font-size: 12px;
+            color: #8c8c8c;
+        } */
+ 
+ .footer .footbox ul li a {
+ 	font-size: 12px;
+ 	color: #8c8c8c;
+ }
+ 
+ .footer .footbox ul li span {
+ 	margin: 0 2px;
+ }
